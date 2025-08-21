@@ -5,16 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Saara Uthmaan | Portfolio</title>
   <style>
-    /* Color Theme */
-    :root {
-      --primary-purple: #6a0dad;
-      --turquoise: #30d5c8;
-      --black: #111111;
-      --white: #ffffff;
-      --gray-light: #f5f5f5;
-      --gray-dark: #444444;
-    }
-
     * {
       box-sizing: border-box;
       margin: 0;
@@ -22,16 +12,16 @@
     }
     body {
       font-family: system-ui, sans-serif;
-      color: var(--black);
-      background: var(--white);
+      color: #111;
+      background: #fafafa;
       line-height: 1.6;
     }
     header {
       position: sticky;
       top: 0;
       backdrop-filter: blur(10px);
-      background: rgba(255,255,255,0.9);
-      border-bottom: 1px solid var(--gray-light);
+      background: rgba(255,255,255,0.8);
+      border-bottom: 1px solid #e5e5e5;
       z-index: 50;
     }
     .container {
@@ -47,19 +37,15 @@
     }
     nav a {
       text-decoration: none;
-      color: var(--gray-dark);
+      color: #444;
       margin-left: 1rem;
       font-size: 0.9rem;
-      font-weight: 500;
     }
     nav a:hover {
-      color: var(--primary-purple);
+      color: #000;
     }
-
     .hero {
       padding: 6rem 0;
-      background: linear-gradient(135deg, var(--primary-purple) 0%, var(--turquoise) 100%);
-      color: var(--white);
     }
     .hero h1 {
       font-size: 2.5rem;
@@ -68,7 +54,7 @@
     .hero p {
       margin-top: 1rem;
       max-width: 600px;
-      color: var(--white);
+      color: #555;
     }
     .btn {
       display: inline-block;
@@ -78,26 +64,22 @@
       border-radius: 1rem;
       font-size: 0.9rem;
       text-decoration: none;
-      font-weight: 500;
     }
     .btn-primary {
-      background: var(--black);
-      color: var(--white);
+      background: #000;
+      color: #fff;
     }
     .btn-outline {
-      border: 2px solid var(--white);
-      color: var(--white);
+      border: 1px solid #ddd;
+      color: #111;
     }
-
     .section {
       padding: 4rem 0;
     }
     .section h2 {
       font-size: 1.8rem;
       margin-bottom: 1.5rem;
-      color: var(--primary-purple);
     }
-
     .grid {
       display: grid;
       gap: 1.5rem;
@@ -106,14 +88,14 @@
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
     .card {
-      background: var(--white);
-      border: 1px solid var(--gray-light);
+      background: #fff;
+      border: 1px solid #eee;
       border-radius: 1rem;
       overflow: hidden;
       transition: box-shadow 0.2s;
     }
     .card:hover {
-      box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
     .card img {
       width: 100%;
@@ -126,7 +108,6 @@
     .card-content h3 {
       font-size: 1rem;
       margin-bottom: 0.5rem;
-      color: var(--black);
     }
     .tags span {
       display: inline-block;
@@ -134,25 +115,16 @@
       margin-top: 0.4rem;
       font-size: 0.75rem;
       padding: 0.2rem 0.6rem;
-      border: 1px solid var(--gray-light);
+      border: 1px solid #ddd;
       border-radius: 1rem;
-      color: var(--gray-dark);
+      color: #555;
     }
     footer {
       padding: 2rem 0;
       font-size: 0.85rem;
-      color: var(--gray-dark);
-      border-top: 1px solid var(--gray-light);
+      color: #666;
+      border-top: 1px solid #eee;
       text-align: center;
-      background: var(--black);
-      color: var(--white);
-    }
-    footer a {
-      color: var(--turquoise);
-      text-decoration: none;
-    }
-    footer a:hover {
-      color: var(--primary-purple);
     }
   </style>
 </head>
@@ -162,12 +134,10 @@
       <nav>
         <a href="#top" style="font-weight:600;">Saara Uthmaan</a>
         <div>
+          <a href="#work">Work</a>
           <a href="#about">About</a>
-          <a href="#research">Research</a>
-          <a href="#updates">Updates</a>
-          <a href="#readings">Readings</a>
-          <a href="#writing">My Writing</a>
-          <a href="#journey">Journey</a>
+          <a href="#contact">Contact</a>
+          <a href="#resume">Resume</a>
         </div>
       </nav>
     </div>
@@ -175,39 +145,56 @@
 
   <section id="top" class="hero container">
     <h1>Creative technologist & researcher</h1>
-    <p>I design and build human-centered tools for learning, creativity, and AI. Currently studying Informatics & Creative Writing at UW.</p>
-    <a href="#about" class="btn btn-primary">Explore</a>
+    <p>I design and build human‑centered tools for learning, creativity, and AI. Currently studying Informatics & Creative Writing at UW.</p>
+    <a href="#work" class="btn btn-primary">View work</a>
+    <a href="#contact" class="btn btn-outline">Get in touch</a>
+  </section>
+
+  <section id="work" class="section container">
+    <h2>Selected Work</h2>
+    <div class="grid projects">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=800" alt="Project One">
+        <div class="card-content">
+          <h3>Project One</h3>
+          <p>Short one‑liner about what it is and why it matters.</p>
+          <div class="tags">
+            <span>D3.js</span><span>HCI</span><span>Research</span>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1581093588401-16ec8a6a1a94?w=800" alt="Project Two">
+        <div class="card-content">
+          <h3>Project Two</h3>
+          <p>A concise description of goals, role, and outcome.</p>
+          <div class="tags">
+            <span>React</span><span>UX</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <section id="about" class="section container">
     <h2>About</h2>
-    <p>I’m Saara — a creative technologist focused on HCI, computing education, and human-AI interaction. I enjoy translating fuzzy ideas into clear, useful products.</p>
+    <p>I’m Saara — a creative technologist focused on HCI, computing education, and human‑AI interaction. I enjoy translating fuzzy ideas into clear, useful products.</p>
     <p>Previously at Intel (Skipper gem), now mentoring at MIT FutureMakers and building data viz at UW. Passionate about equity in CS.</p>
   </section>
 
-  <section id="research" class="section container">
-    <h2>Research</h2>
-    <p>Projects and studies in HCI, AI-assisted learning, and computing education. Explore interactive tools, user studies, and findings.</p>
+  <section id="resume" class="section container">
+    <h2>Experience</h2>
+    <ul>
+      <li><strong>Data Visualization Research Intern</strong> — UW Interactive Data Lab (Jun 2024 — Present)<br>Built interactive D3 tools; ran user studies on LLMs in learning data visualization.</li>
+      <li><strong>Data Activism Mentor & Researcher</strong> — MIT FutureMakers (2024 — Present)<br>Mentored students, developed curricula, and evaluated outcomes.</li>
+      <li><strong>Software Engineering Intern</strong> — Intel (Summer 2023)<br>Developed Skipper gem and contributed to internal tooling.</li>
+    </ul>
   </section>
 
-  <section id="updates" class="section container">
-    <h2>Updates</h2>
-    <p>Latest activities, talks, projects, and achievements in my work and research.</p>
-  </section>
-
-  <section id="readings" class="section container">
-    <h2>Readings</h2>
-    <p>Books, articles, and papers that inspire my research and writing.</p>
-  </section>
-
-  <section id="writing" class="section container">
-    <h2>My Writing</h2>
-    <p>Essays, articles, and reflections on technology, education, and creativity.</p>
-  </section>
-
-  <section id="journey" class="section container">
-    <h2>Journey</h2>
-    <p>My story, milestones, and experiences shaping my career and research path.</p>
+  <section id="contact" class="section container">
+    <h2>Let’s build something</h2>
+    <p>Open to collaborations, research, and product roles. Tell me about your idea or role and how I can help.</p>
+    <a href="mailto:you@example.com" class="btn btn-outline">Email me</a>
   </section>
 
   <footer>
