@@ -34,6 +34,13 @@
       border-bottom: 1px solid var(--gray-light);
       z-index: 50;
     }
+    .circular-image {
+      width: 150px;       /* Same width and height */
+      height: 150px;
+      border-radius: 50%; /* Makes it a circle */
+      object-fit: cover;  /* Ensures the image fills the container */
+      border: 3px solid #333; /* Optional border */
+    }
     .container {
       max-width: 1100px;
       margin: 0 auto;
@@ -99,6 +106,8 @@
       </nav>
     </div>
   </header>
+
+  <img src="saara-colorstack.JPG" alt="Circular picture of Saara" class="circular-image">
 
   <section id="about" class="section container">
     <h2>About Me</h2>
