@@ -92,6 +92,33 @@
     footer a:hover {
       color: var(--primary-purple);
     }
+
+    .about-layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.about-text {
+  max-width: 600px;
+}
+
+/* Optional: better circle image */
+.circular-image {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Mobile-friendly */
+@media (max-width: 768px) {
+  .about-layout {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+}    
   </style>
 </head>
 <body>
@@ -111,13 +138,29 @@
     </div>
   </header>
 
-  <img src="saara-colorstack.JPG" alt="Circular picture of Saara" class="circular-image">
+<section id="about" class="section container">
+  <div class="about-layout">
+    
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p style="color: var(--primary-purple);">
+        I’m Saara — a creative technologist focused on HCI, computing education,
+        and human-AI interaction. I enjoy translating fuzzy ideas into clear,
+        useful products.
+      </p>
+      <p style="color: var(--turquoise);">
+        Previously at Intel (Skipper gem), now mentoring at MIT FutureMakers and
+        building data viz at UW. Passionate about equity in CS.
+      </p>
+    </div>
 
-  <section id="about" class="section container">
-    <h2>About Me</h2>
-    <p style="color: var(--primary-purple);">I’m Saara — a creative technologist focused on HCI, computing education, and human-AI interaction. I enjoy translating fuzzy ideas into clear, useful products.</p>
-    <p style="color: var(--turquoise);">Previously at Intel (Skipper gem), now mentoring at MIT FutureMakers and building data viz at UW. Passionate about equity in CS.</p>
-  </section>
+    <img src="saara-colorstack.JPG"
+         alt="Circular picture of Saara"
+         class="circular-image">
+
+  </div>
+</section>
+
 
   <section id="research" class="section container">
     <h2>Research</h2>
