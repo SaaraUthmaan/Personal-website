@@ -4,6 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Saara Uthmaan | Portfolio</title>
+  <script>
+  // Runs immediately before the body even loads
+  if (localStorage.getItem('theme') === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }
+  </script>
   <style>
     /* Color Theme */
     :root {
@@ -258,7 +264,7 @@
         </div>
           <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
      <span class="sun">☀️</span>
-     <span class="moon" style="display: none;">🌙</span>
+     <span class="moon">🌙</span>
           </button>
       </nav>
     </div>
