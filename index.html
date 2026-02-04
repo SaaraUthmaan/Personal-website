@@ -253,9 +253,6 @@
   <p>Projects and studies in HCI, AI-assisted learning, and computing education. Explore interactive tools, user studies, and findings.</p>
   
   <div class="slider-container" style="position: relative;">
-    <!-- 1. ADD THE BUTTONS -->
-    <button class="nav-button prev" onclick="moveSlider(-1)">&#10094;</button>
-    <button class="nav-button next" onclick="moveSlider(1)">&#10095;</button>
 
     <!-- 2. ADD THE ID "projectSlider" HERE -->
     <div class="slider" id="projectSlider">
@@ -352,14 +349,6 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
-  function moveSlider(direction) {
-    const slider = document.getElementById('projectSlider');
-    const scrollAmount = 330; // Matches card width + gap
-    slider.scrollBy({
-      left: scrollAmount * direction,
-      behavior: 'smooth'
-    });
-  }
   </script>
 </body>
 </html>
