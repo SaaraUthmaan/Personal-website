@@ -405,6 +405,27 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    const themeToggle = document.getElementById('theme-toggle');
+const htmlElement = document.documentElement;
+
+// 1. Check for saved user preference on page load
+const savedTheme = localStorage.getItem('theme') || 'light';
+htmlElement.setAttribute('data-theme', savedTheme);
+
+// 2. Add click event listener to the button
+themeToggle.addEventListener('click', () => {
+  // Check the current theme
+  const currentTheme = htmlElement.getAttribute('data-theme');
+  
+  // Switch to the opposite theme
+  const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+  
+  // Apply the new theme and save it to localStorage
+  htmlElement.setAttribute('data-theme', newTheme);
+  localStorage.setItem('theme', newTheme);
+});
+    
   </script>
 </body>
 </html>
