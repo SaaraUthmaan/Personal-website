@@ -24,7 +24,7 @@
       font-family: system-ui, sans-serif;
       color: var(--black);
       background: var(--white);
-      line-height: 2;
+      line-height: 1.6;
     }
     header {
       position: sticky;
@@ -34,17 +34,7 @@
       border-bottom: 1px solid var(--gray-light);
       z-index: 50;
     }
-    .circular-image {
-      width: 250px;      
-      height: 250px;
-      border-radius: 50%; 
-      border-style: solid;
-      border-color: gray;
-      margin-left: 1rem;
-      margin-right: 1rem;
-      margin-bottom: 1rem;
-      border-radius: 6px;
-    }
+  
     .container {
       max-width: 1100px;
       margin: 0 auto;
@@ -68,8 +58,10 @@
     }
 
     .section {
-      padding: 4rem 0;
+      padding: 1.5rem 0;
+      scroll-margin-top: 70px;
     }
+    
     .section h2 {
       font-size: 1.8rem;
       margin-bottom: 1.5rem;
@@ -104,12 +96,12 @@
   max-width: 600px;
 }
 
-/* Optional: better circle image */
 .circular-image {
   width: 250px;
   height: 250px;
   border-radius: 50%;
   object-fit: cover;
+  border: 2px solid gray; /* Optional: adds the border back */
 }
 
 /* Mobile-friendly */
