@@ -126,6 +126,32 @@
   background-clip: content-box; 
 }
 
+
+.horizontal-contact-img {
+    display: flex;          /* Lines items up horizontally */
+    flex-wrap: wrap;        
+    gap: 25px;              /* Space between each contact item group */
+    align-items: center;
+    font-family: Arial, sans-serif;
+    margin: 20px 0;
+  }
+
+  .horizontal-contact-img a {
+    text-decoration: none;  /* Removes the hyperlink underline */
+    color: #333;            /* Default text color */
+    display: flex;
+    align-items: center;    /* Centers logo vertically with text */
+    gap: 8px;               /* Space between image and text */
+    font-size: 16px;
+  }
+
+  /* Styling for the image itself */
+  .contact-icon {
+    width: 20px;            /* Controls the size of all logos */
+    height: auto;           /* Maintains aspect ratio */
+    vertical-align: middle;
+  }
+    
 /*NEW CARD SLIDER CODE*/
 
     /* Slider Styles */
@@ -240,6 +266,34 @@
         Alongside Eman Sherif, I also explore how computing students envision culturally responsive help-seeking communities. 
         This quarter, I’m conducting my capstone project on Somali poetry with Dr. Dr. Temi Odumosu.
       </p>
+
+      <div class="horizontal-contact-img">
+  <a href="mailto:hanwend@cs.cmu.edu">
+    <img src="images/email_icon.svg" alt="Email Icon" class="contact-icon"> 
+    hanwend [at] cs.cmu.edu
+  </a>
+  <a href="YOUR_SCHOLAR_URL_HERE">
+    <img src="images/scholar_logo.svg" alt="Google Scholar Logo" class="contact-icon">
+    Google Scholar
+  </a>
+  <a href="YOUR_LINKEDIN_URL_HERE">
+    <img src="images/linkedin_logo.svg" alt="LinkedIn Logo" class="contact-icon">
+    LinkedIn
+  </a>
+  <a href="YOUR_GITHUB_URL_HERE">
+    <img src="images/github_logo.svg" alt="GitHub Logo" class="contact-icon">
+    GitHub
+  </a>
+  <a href="YOUR_TWITTER_URL_HERE">
+    <img src="images/twitter_logo.svg" alt="Twitter Logo" class="contact-icon">
+    Twitter
+  </a>
+  <a href="YOUR_BLUESKY_URL_HERE">
+    <img src="images/bluesky_logo.svg" alt="Bluesky Logo" class="contact-icon">
+    Bluesky
+  </a>
+</div>
+      
     </div>
 
     <img src="saara-colorstack.JPG"
