@@ -126,7 +126,84 @@
   background-clip: content-box; 
 }
 
+/*NEW CARD SLIDER CODE*/
 
+    /* Slider Styles */
+.slider-container {
+  position: relative;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.slider {
+  display: flex;
+  overflow-x: auto;
+  gap: 1.5rem;
+  scroll-snap-type: x mandatory; /* Makes it snap like a slideshow */
+  padding-bottom: 1rem;
+  scrollbar-width: none; /* Hides scrollbar for Firefox */
+}
+
+.slider::-webkit-scrollbar {
+  display: none; /* Hides scrollbar for Chrome/Safari */
+}
+
+.project-card {
+  flex: 0 0 300px; /* Width of each card */
+  scroll-snap-align: start;
+  text-decoration: none;
+  color: inherit;
+  background: var(--white);
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  overflow: hidden;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary-purple);
+}
+
+.card-image {
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--gray-light);
+}
+
+.card-content {
+  padding: 1.25rem;
+}
+
+.card-content h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: var(--black);
+}
+
+.card-content p {
+  font-size: 0.9rem;
+  color: var(--gray-dark);
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+.view-project {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--primary-purple);
+}
+
+/* Mobile: make cards wider so they fill the screen */
+@media (max-width: 600px) {
+  .project-card {
+    flex: 0 0 85%;
+  }
+}
+    
 /* Mobile-friendly */
 @media (max-width: 768px) {
   .about-layout {
@@ -171,11 +248,45 @@
   </div>
 </section>
 
-
   <section id="research" class="section container">
-    <h2>Research</h2>
-    <p>Projects and studies in HCI, AI-assisted learning, and computing education. Explore interactive tools, user studies, and findings.</p>
-  </section>
+  <h2>Research</h2>
+  <p>Projects and studies in HCI, AI-assisted learning, and computing education. Explore interactive tools, user studies, and findings.</p>
+  
+  <div class="slider-container">
+    <div class="slider">
+      <!-- Project Card 1 -->
+      <a href="project1-details.html" class="project-card">
+        <div class="card-image" style="background-image: url('d3-docs.jpg');"></div>
+        <div class="card-content">
+          <h3>D3.js Documentation</h3>
+          <p>Supporting AI-Assisted learning and verifying AI hallucinations.</p>
+          <span class="view-project">View Project →</span>
+        </div>
+      </a>
+
+      <!-- Project Card 2 -->
+      <a href="project2-details.html" class="project-card">
+        <div class="card-image" style="background-image: url('help-seeking.jpg');"></div>
+        <div class="card-content">
+          <h3>Help-Seeking Communities</h3>
+          <p>Exploring culturally responsive spaces for computing students.</p>
+          <span class="view-project">View Project →</span>
+        </div>
+      </a>
+
+      <!-- Project Card 3 -->
+      <a href="project3-details.html" class="project-card">
+        <div class="card-image" style="background-image: url('somali-poetry.jpg');"></div>
+        <div class="card-content">
+          <h3>Somali Poetry Capstone</h3>
+          <p>Digital archives and creative exploration with Dr. Temi Odumosu.</p>
+          <span class="view-project">View Project →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
 
   <section id="updates" class="section container">
     <h2>News</h2>
