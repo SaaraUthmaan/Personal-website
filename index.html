@@ -74,7 +74,7 @@
       color: var(--gray-dark);
       border-top: 1px solid var(--gray-light);
       text-align: center;
-      background: var(--white);
+      background: var(--white); 
       color: var(--black);
     }
     footer a {
@@ -104,7 +104,27 @@
   border: 2px solid gray;
   display: block;
   margin: 1rem auto; 
+  flex-shrink: 0;
 }
+
+.news-scroll-box {
+  max-height: 250px;     /* Set the height you want */
+  overflow-y: auto;      /* Adds the scrollbar when content is too long */
+  padding: 1rem;
+  background: var(--gray-light);
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* Optional: Make the scrollbar look nicer */
+.news-scroll-box::-webkit-scrollbar {
+  width: 6px;
+}
+.news-scroll-box::-webkit-scrollbar-thumb {
+  background: var(--primary-purple);
+  border-radius: 10px;
+}
+
 
 /* Mobile-friendly */
 @media (max-width: 768px) {
@@ -124,9 +144,7 @@
           <a href="#about">About Me</a>
           <a href="#research">Research</a>
           <a href="#updates">Updates</a>
-          <a href="#readings">Readings</a>
-          <a href="#writing">My Writing</a>
-          <a href="#journey">Journey</a>
+          <a href="#CV">CV</a>
         </div>
       </nav>
     </div>
@@ -159,23 +177,17 @@
   </section>
 
   <section id="updates" class="section container">
-    <h2>Updates</h2>
+    <h2>News</h2>
     <p>Latest activities, talks, projects, and achievements in my work and research.</p>
-    <p><span style="color: black; font-weight: bold;"> 12/2025: </span>✨ Exctied to begin my Capstone project under <a href="https://ischool.uw.edu/people/faculty/profile/todumosu">Dr. Temi Odumosu.</a></p>
+    <div class="news-scroll-box">
+      <p><span style="color: black; font-weight: bold;"> 12/2025: </span>✨ Exctied to join <a href="https://www.computinged.uw.edu/"> Center for Learning, Computing, and Imagination</a></p>
+      <p><span style="color: black; font-weight: bold;"> 12/2025: </span>✨ Exctied to begin my Capstone project under <a href="https://ischool.uw.edu/people/faculty/profile/todumosu">Dr. Temi Odumosu.</a></p>
+    </div>
   </section>
 
-  <section id="readings" class="section container">
-    <h2>Readings</h2>
-    <p>Books, articles, and papers that inspire my research and writing.</p>
-  </section>
 
-  <section id="writing" class="section container">
-    <h2>My Writing</h2>
-    <p>Essays, articles, and reflections on technology, education, and creativity.</p>
-  </section>
-
-  <section id="journey" class="section container">
-    <h2>Journey</h2>
+  <section id="CV" class="section container">
+    <h2>CV</h2>
     <p>My story, milestones, and experiences shaping my career and research path.</p>
   </section>
 
