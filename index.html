@@ -57,6 +57,12 @@
       color: var(--primary-purple);
     }
 
+    .sun { display: block; }
+    .moon { display: none; }
+
+    [data-theme="dark"] .sun { display: none; }
+    [data-theme="dark"] .moon { display: block; }
+
     .section {
       padding: 1.5rem 0;
       scroll-margin-top: 70px;
@@ -241,7 +247,7 @@
 </head>
 <body>
   <header>
-    <div class="container">
+        <div class="container">
       <nav>
         <a href="#about" style="font-weight:600;">Saara Uthmaan</a>
         <div>
@@ -250,6 +256,10 @@
           <a href="#updates">Updates</a>
           <a href="#CV">CV</a>
         </div>
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+     <span class="sun">☀️</span>
+     <span class="moon" style="display: none;">🌙</span>
+          </button>
       </nav>
     </div>
   </header>
