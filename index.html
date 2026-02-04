@@ -249,6 +249,42 @@
     text-align: center;
   }
 }    
+
+/* under construction code*/
+
+    .toast {
+  visibility: hidden; /* Hidden by default */
+  min-width: 250px;
+  background-color: var(--primary-purple);
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1001; /* Above everything else */
+  left: 50%;
+  bottom: 30px;
+  transform: translateX(-50%);
+  font-weight: bold;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Animations */
+.toast.show {
+  visibility: visible;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@keyframes fadein {
+  from { bottom: 0; opacity: 0; }
+  to { bottom: 30px; opacity: 1; }
+}
+
+@keyframes fadeout {
+  from { bottom: 30px; opacity: 1; }
+  to { bottom: 0; opacity: 0; }
+}
+
   </style>
 </head>
 <body>
@@ -409,6 +445,12 @@
     © <span id="year"></span> Saara Uthmaan · <a href="#about">Back to top</a>
   </footer>
 
+<!-- The Under Construction Popup -->
+<div id="construction-toast" class="toast">
+  🚧 Website still under construction... 🚧
+</div>
+
+  
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
 
@@ -431,7 +473,18 @@ themeToggle.addEventListener('click', () => {
   htmlElement.setAttribute('data-theme', newTheme);
   localStorage.setItem('theme', newTheme);
 });
-    
+/*under construction code*/
+
+  window.addEventListener('DOMContentLoaded', () => {
+  const toast = document.getElementById("construction-toast");
+  toast.className = "toast show";
+  
+  // Remove the "show" class after 3 seconds so it disappears
+  setTimeout(() => { 
+    toast.className = toast.className.replace("show", ""); 
+  }, 3000);
+});
+
   </script>
 </body>
 </html>
